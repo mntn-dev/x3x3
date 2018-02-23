@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+<title>x3x3-demo</title>
+<meta charset="utf-8"/>
+
+<script type="text/javascript" src="https://rawgit.com/mntn-dev/x3x3/master/x3x3.js"></script> <!-- 0.1 -->
+
+<script type="text/javascript">
+
+window.onload=function(){
+ 
+ document.body.innerHTML=
+   '<pre style="font-size:2vw;line-height:2vw;">'+
+   x3x3.txt((new Date).toString().substr(0,24),'\u25a0')+
+   x3x3.txt('.:*/\'()[]=+-\"|','@')+
+   x3x3.txt('Hello world.')+
+   '</pre>';
+
+}
+
+</script>
+
+</head>
+
+
+<body></body>
+
+</html>
