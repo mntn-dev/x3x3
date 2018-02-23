@@ -5,10 +5,9 @@
 <title>x3x3-demo</title>
 <meta charset="utf-8"/>
 
-<script type="text/javascript" src="https://rawgit.com/mntn-dev/x3x3/master/x3x3.js"></script> <!-- 0.1 -->
+<script type="text/javascript" src="https://rawgit.com/mntn-dev/x3x3/master/x3x3.js"></script> <!-- 0.2 -->
 
 <script type="text/javascript">
-
 window.onload=function(){
  
  document.body.innerHTML=
@@ -16,10 +15,11 @@ window.onload=function(){
    x3x3.txt((new Date).toString().substr(0,24),'\u25a0')+
    x3x3.txt('.:*/\'()[]=+-\"|','@')+
    x3x3.txt('Hello world.')+
-   '</pre>';
-
+   '</pre><hr style="border:1px solid cyan;"/><br/><br/>'+
+   x3x3.svg('svg output')+"<br/><br/>"+
+   x3x3.svg('https://github.com/mntn-dev/x3x3',5,'hotpink');
+   
 }
-
 </script>
 
 </head>
