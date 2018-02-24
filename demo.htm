@@ -12,12 +12,12 @@ window.onload=function(){
  
  document.body.innerHTML=
    '<pre style="font-size:2vw;line-height:2vw;">'+
-   x3x3.txt((new Date).toString().substr(0,24),'+')+
-   x3x3.txt('.:*/\'()[]=+-\"|','@')+
-   x3x3.txt('Hello world.')+
+   '<span title="'+(o=(new Date).toString().substr(0,24))+'">'+x3x3.txt(o,'+')+'</span>'+
+   '<span title=".:*/\'()[]=+-\"|">'+x3x3.txt('.:*/\'()[]=+-\"|','@')+'</span>'+
+   '<span title="Hello world.">'+x3x3.txt('Hello world.')+'</span>'+
    '</pre><hr style="border:1px solid cyan;"/><br/><br/>'+
-   x3x3.svg('svg output')+"<br/><br/>"+
-   '<a style="text-decoration:none;outline:0;" href="https://github.com/mntn-dev/x3x3" target="_blank">'+x3x3.svg('https://github.com/mntn-dev/x3x3',5,'hotpink')+'</a>';
+   '<span title="svg output">'+x3x3.svg('svg output')+"</span><br/><br/>"+
+   '<a title="https://github.com/mntn-dev/x3x3" style="text-decoration:none;outline:0;" href="https://github.com/mntn-dev/x3x3" target="_blank">'+x3x3.svg('https://github.com/mntn-dev/x3x3',5,'hotpink')+'</a>';
    
 }
 </script>
