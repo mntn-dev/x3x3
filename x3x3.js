@@ -1,8 +1,8 @@
-/*x3x3-0.2;(c)2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;
+/*x3x3-0.3;(c)2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;
 
 Usage:
 
-x3x3.txt('hello world.'[,mask_char='#']); //valid chars: a-z 0-9 |_=+*-.,:'/[]()"
+x3x3.txt('hello world.'[,mask_char='#']); //valid chars: a-z 0-9 |_=+*-.,:'/[](){}<>"$€°\
 x3x3.svg('hello world.'[,box_size=10,color='black']);
 
 Demo:
@@ -20,7 +20,7 @@ https://rawgit.com/mntn-dev/x3x3/master/demo.htm
   if(!(o=x3x3.txt(o)))return;
   o=o.split('\n');
   _='';
-  c=Math.random().toString(36).substr(2, 3);
+  c=Math.random().toString(36).substr(2,3);
   for(l=0;l<3;l++)for(j=0;j<o[1].length-1;j++)if(o[l+1][j]!=' ')_+='<rect class="_'+c+'" x="'+(j*d)+'" y="'+(l*d)+'"/>';
   return ('<svg width="'+(w=((o[1].length-1)*d))+'" height="'+(h=(d*3))+'" viewBox="0 0 '+w+' '+h+
   '" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges"><style type="text/css">'+
@@ -33,10 +33,11 @@ https://rawgit.com/mntn-dev/x3x3/master/demo.htm
     'q^^^^^^  ^r^^^^  ^  s ^^ ^ ^^ t^^^ ^  ^ u^ ^^ ^^^^v^ ^^ ^ ^ w^ ^^^^^^^x^ ^ ^ ^ ^'+
     'y^ ^ ^  ^ z^^  ^  ^^0^^^^ ^^^^1^^  ^ ^^^2^^  ^  ^^3^^^ ^^^^^4^ ^^^^  ^5 ^^ ^ ^^ '+
     '6^  ^^^^^^7^^^  ^  ^8 ^^^^^^^^9^^^^^^  ^"^^ ^^    *    ^    -   ^^^   + ^ ^^^ ^ '+
-    ',    ^  ^ .       ^ /  ^ ^ ^  (  ^ ^   ^)^   ^ ^  : ^     ^ =^^^^^^   [ ^^ ^  ^^'+
-    ']^^  ^ ^^ _      ^^^| ^  ^  ^ \' ^  ^    ';
+    ',    ^  ^ .       ^ /  ^ ^ ^  (  ^ ^   ^)^   ^ ^  : ^     ^ =^^^   ^^^[ ^^ ^  ^^'+
+    ']^^  ^ ^^ _      ^^^| ^  ^  ^ {  ^ ^   ^}^   ^ ^  <  ^ ^   ^>^   ^ ^  ° ^ ^ ^ ^ '+
+    '\\^   ^   ^\' ^  ^    $ ^^ ^ ^^ € ^^^^  ^^';
     
-  if(!(o=o.toString().toLowerCase()).match(/^[\|\_\=\+\*\-\.,:'\/\[\]\(\)"a-z0-9 ]+$/))return;
+  if(!(o=o.toString().toLowerCase()).match(/^[\|\_\=\+\*\-\.,:'\/\[\]\(\)\{\}$€\\<>°"a-z0-9 ]+$/))return;
   _1=['','',''];
   for(j=0;j<o.length;j++){
    if(o[j]==' ')s=o[j].repeat(9);else s=_.substr(_.indexOf(o[j])+1,9);
