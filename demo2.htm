@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+<title>x3x3-demo2</title>
+<meta charset="utf-8"/>
+
+<style type="text/css">
+<!--
+
+a{text-decoration:none;}
+
+svg{width:100%;height:auto;margin-bottom:3%;} /*responsive*/
+svg rect{fill:tomato!important;}
+
+a svg rect{fill:cyan!important;}
+ 
+--> 
+</style>
+ 
+<script type="text/javascript" src="https://rawgit.com/mntn-dev/x3x3/master/x3x3.js"></script> <!-- 0.3 -->
+
+<script type="text/javascript">
+window.onload=function(){
+   
+ X=document.getElementById('x');
+  
+ /*html-content2svg*/
+ _=X.innerHTML.split('\n');___='';
+ for(j=0;j<_.length;j++){
+  __=_[j].match(/(<.*?>|[^<>]+)/g);
+  if(__)for(i=0;i<__.length;i++)___+=((__[i][0]=='<')?__[i]:x3x3.svg(__[i]));
+  ___+='\n';
+ }
+ 
+  
+ X.innerHTML=___;
+
+   
+}
+</script>
+
+</head>
+
+
+<body>
+<pre id="x">
+Hello world.
+<a target="_blank" href="https://github.com/mntn-dev/x3x3" title="x3x3.js">x3x3.js</a>
+xxxxxxxx
+</pre>
+</body>
+
+</html>
