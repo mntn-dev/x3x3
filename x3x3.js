@@ -1,25 +1,21 @@
-/*x3x3-0.3;(c)2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;
+/*x3x3-0.3.1;(c)2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;
 
 Usage:
-
 x3x3.txt('hello world.'[,mask_char='#']); //valid chars: a-z 0-9 |_=+*-.,:'/[](){}<>"$€°\
 x3x3.svg('hello world.'[,box_size=10,color='black']);
 
 Demo:
-
 https://rawgit.com/mntn-dev/x3x3/master/demo.htm
-
-
 */
 
 
 ;var x3x3={
  
- svg:function(o,d,f){
+  svg:function(o,d,f){
   if(isNaN(d))d=10;
   if(!(o=x3x3.txt(o)))return;
   o=o.split('\n');
-  _='';
+  var _='',c,l,j,h,w;  
   c=Math.random().toString(36).substr(2,3);
   for(l=0;l<3;l++)for(j=0;j<o[1].length-1;j++)if(o[l+1][j]!=' ')_+='<rect class="_'+c+'" x="'+(j*d)+'" y="'+(l*d)+'"/>';
   return ('<svg width="'+(w=((o[1].length-1)*d))+'" height="'+(h=(d*3))+'" viewBox="0 0 '+w+' '+h+
@@ -27,7 +23,8 @@ https://rawgit.com/mntn-dev/x3x3/master/demo.htm
   '<![CDATA[._'+c+'{height:'+d+';width:'+d+';fill:'+(f?f:'#000')+';}]]></style>'+_+'</svg>');
   },
  
- txt:function(o,m=!1){
+  txt:function(o,m=!1){
+  var
   _='a ^ ^^^^ ^b^^ ^^^^^^c^^^^  ^^^d^^ ^ ^^^ e^^^^^ ^^^f^^^^^ ^  g^^ ^ ^^^^h^ ^^^^^ ^'+
     'i^^^ ^ ^^^j  ^  ^^^ k^ ^^^ ^ ^l^  ^  ^^^m^^^^^^^ ^n^^^^ ^^ ^o^^^^ ^^^^p^^^^^^^  '+
     'q^^^^^^  ^r^^^^  ^  s ^^ ^ ^^ t^^^ ^  ^ u^ ^^ ^^^^v^ ^^ ^ ^ w^ ^^^^^^^x^ ^ ^ ^ ^'+
@@ -35,7 +32,8 @@ https://rawgit.com/mntn-dev/x3x3/master/demo.htm
     '6^  ^^^^^^7^^^  ^  ^8 ^^^^^^^^9^^^^^^  ^"^^ ^^    *    ^    -   ^^^   + ^ ^^^ ^ '+
     ',    ^  ^ .       ^ /  ^ ^ ^  (  ^ ^   ^)^   ^ ^  : ^     ^ =^^^   ^^^[ ^^ ^  ^^'+
     ']^^  ^ ^^ _      ^^^| ^  ^  ^ {  ^ ^   ^}^   ^ ^  <  ^ ^   ^>^   ^ ^  $ ^^ ^ ^^ '+
-    '\\^   ^   ^\' ^  ^    \u20ac ^^^^  ^^\u00b0 ^ ^ ^ ^ ';
+    '\\^   ^   ^\' ^  ^    \u20ac ^^^^  ^^\u00b0 ^ ^ ^ ^ ',
+    _1,j,s;
     
   if(!(o=o.toString().toLowerCase()).match(/^[\|\_\=\+\*\-\.,:'\/\[\]\(\)\{\}$\u20ac\\<>\u00b0"a-z0-9 ]+$/))return;
   _1=['','',''];
@@ -47,4 +45,5 @@ https://rawgit.com/mntn-dev/x3x3/master/demo.htm
   }
   return(('\n'+_1.join('\n')+'\n').replace(/\^/g,(m?m[0]:'#')));
   }
-}
+
+};
