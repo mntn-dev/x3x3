@@ -10,8 +10,8 @@
 x3x3.txt('hello world.'[,mask_char='#']);
 x3x3.svg('hello world.'[,box_size=10,color='black']);</pre>
 
-# Demo
-* <a href="https://rawgit.com/mntn-dev/x3x3/master/demo.htm">@demo.htm</a>
+# Demos
+* <a href="https://rawgit.com/mntn-dev/x3x3/master/demo.htm">@demo.htm</a> / <a href="https://rawgit.com/mntn-dev/x3x3/master/demo2.htm">@demo2.htm</a>
 
 # Available as font file?
 <a href="https://github.com/mntn-dev/x3x3/raw/master/x3x3.ttf">Yay</a>. (~5.8KB)
