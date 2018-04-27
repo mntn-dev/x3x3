@@ -4,8 +4,10 @@ Usage:
 x3x3.txt('hello world.'[,mask_char='#']); //valid chars: a-z 0-9 |_=+*-.,:'/[](){}<>"$€°\
 x3x3.svg('hello world.'[,box_size=10,color='black']);
 
-Demo:
+Demos:
 https://rawgit.com/mntn-dev/x3x3/master/demo.htm
+https://rawgit.com/mntn-dev/x3x3/master/demo2.htm
+
 */
 
 
