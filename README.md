@@ -1,6 +1,4 @@
-<pre>⬛⬛⬛
-⬛⬛⬛
-⬛⬛⬛</pre>
+<img src="https://mntn-dev.github.io/x3x3/x3x3.gif" alt="x3x3"/>
 
 # x3x3
 ⬛ Simple text/svg generator for <a href="https://en.wikipedia.org/wiki/3x3">"3x3" font</a>
