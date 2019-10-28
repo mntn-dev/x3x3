@@ -1,3 +1,4 @@
+<a href="https://data.jsdelivr.com/v1/package/gh/mntn-dev/x3x3/badge?style=rounded"><img src="https://data.jsdelivr.com/v1/package/gh/mntn-dev/x3x3/badge?style=rounded" alt=""/></a><br/><br/>
 <img src="https://mntn-dev.github.io/x3x3/x3x3.gif" alt="x3x3"/>
 
 # x3x3
